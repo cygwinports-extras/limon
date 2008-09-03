@@ -1,0 +1,53 @@
+limon
+------------------------------------------
+Desktop interface for limon, the free English-Hebrew-English dictionary.
+
+Runtime requirements:
+  python-2.5.2-3
+  python-gobject2-2.14.2-1
+  python-gtk2-2.12.1-1
+
+Canonical website:
+  http://hspell-gui.sourceforge.net/limon-gui.html
+
+Canonical download:
+  http://prdownloads.sourceforge.net/hspell-gui/
+
+-------------------------------------------
+
+Build instructions:
+  unpack limon-0.6.1-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./limon-0.6.1-X.cygport all
+
+This will create:
+  /usr/src/limon-0.6.1-X-src.tar.bz2
+  /usr/src/limon-0.6.1-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/postinstall/limon.sh
+  /usr/bin/limon
+  /usr/lib/python2.5/site-packages/limon.py
+  /usr/lib/python2.5/site-packages/limon.pyc
+  /usr/lib/python2.5/site-packages/limon.pyo
+  /usr/share/applications/limon.desktop
+  /usr/share/limon/limon.glade
+
+------------------
+
+Port Notes:
+
+----- version 0.6.1-1 -----
+Version bump.
+
+----- version 0.6-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

@@ -1,0 +1,25 @@
+inherit python
+
+DESCRIPTION="GTK+ GUI for the limon English-Hebrew-English dictionary"
+HOMEPAGE="http://hspell-gui.sourceforge.net/limon-gui.html"
+SRC_URI="mirror://sourceforge/hspell-gui/${P}.tar.bz2"
+SRC_DIR="${P%.${PVP[2]}}"
+
+src_compile() { :; }
+
+src_test() {
+	cd ${S}
+	${PYTHON} test_limon.py
+}
+
+src_install() {
+	cd ${S}
+	newbin limongtk.py limon
+	dopython limon.py
+	domenu limon.desktop
+
+	insinto /usr/share/limon
+	doins limon.glade
+
+	python_optimize
+}
